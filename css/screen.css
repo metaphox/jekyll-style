@@ -1,0 +1,89 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 16, ../sass/screen.scss */
+body.wireframe {
+  background: url("../img/_grid.png");
+}
+/* line 18, ../sass/screen.scss */
+body.wireframe #grid-columns {
+  position: fixed;
+  height: 100%;
+  top: 0;
+  z-index: -10000;
+}
+/* line 22, ../sass/screen.scss */
+body.wireframe #grid-columns .column {
+  box-sizing: border-box;
+  margin: 25px 0 0 25px;
+  width: 125px;
+  height: 100%;
+  border: 1px solid #ffdddd;
+  float: left;
+}
+
+/* line 34, ../sass/screen.scss */
+body {
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  font-size: 15px;
+  line-height: 25px;
+}
+/* line 39, ../sass/screen.scss */
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+/* line 46, ../sass/screen.scss */
+body h1, body h2, body h3, body h4, body h5, body h6,
+body hr,
+body p, body dl, body ol, body ul,
+body pre, body blockquote {
+  margin: 25px 0;
+}
+/* line 49, ../sass/screen.scss */
+body dd {
+  margin: 0 25px;
+}
+/* line 52, ../sass/screen.scss */
+body blockquote, body dl {
+  padding: 0 25px;
+}
+/* line 55, ../sass/screen.scss */
+body ol, body ul {
+  padding: 0 50px;
+}
+/* line 58, ../sass/screen.scss */
+body h6 {
+  font-size: 15px;
+}
+/* line 61, ../sass/screen.scss */
+body h5 {
+  font-size: 17px;
+}
+/* line 64, ../sass/screen.scss */
+body h4 {
+  font-size: 19px;
+}
+/* line 67, ../sass/screen.scss */
+body h3 {
+  font-size: 21px;
+}
+/* line 70, ../sass/screen.scss */
+body h2 {
+  font-size: 23px;
+}
+/* line 73, ../sass/screen.scss */
+body h1 {
+  font-size: 25px;
+}
+
+/* line 80, ../sass/screen.scss */
+#container #siteheader #sitename {
+  font-size: 27px;
+  margin: 25px 0;
+}
+/* line 85, ../sass/screen.scss */
+#container article {
+  width: 575px;
+  margin-left: 175px;
+}
