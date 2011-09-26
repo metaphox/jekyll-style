@@ -33,56 +33,75 @@ body {
 body h1, body h2, body h3, body h4, body h5, body h6 {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 }
-/* line 46, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
+body code, body pre {
+  font-family: Monaco, "Lucida Console", monospace;
+  font-size: 13px;
+}
+/* line 51, ../sass/screen.scss */
 body h1, body h2, body h3, body h4, body h5, body h6,
 body hr,
 body p, body dl, body ol, body ul,
 body pre, body blockquote {
   margin: 25px 0;
 }
-/* line 49, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 body dd {
   margin: 0 25px;
 }
-/* line 52, ../sass/screen.scss */
+/* line 57, ../sass/screen.scss */
 body blockquote, body dl {
   padding: 0 25px;
 }
-/* line 55, ../sass/screen.scss */
+/* line 60, ../sass/screen.scss */
 body ol, body ul {
   padding: 0 50px;
 }
-/* line 58, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 body h6 {
   font-size: 15px;
 }
-/* line 61, ../sass/screen.scss */
+/* line 66, ../sass/screen.scss */
 body h5 {
   font-size: 17px;
 }
-/* line 64, ../sass/screen.scss */
+/* line 69, ../sass/screen.scss */
 body h4 {
   font-size: 19px;
 }
-/* line 67, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
 body h3 {
   font-size: 21px;
 }
-/* line 70, ../sass/screen.scss */
+/* line 75, ../sass/screen.scss */
 body h2 {
   font-size: 23px;
 }
-/* line 73, ../sass/screen.scss */
+/* line 78, ../sass/screen.scss */
 body h1 {
   font-size: 25px;
 }
+/* line 81, ../sass/screen.scss */
+body hr {
+  height: 1px;
+  padding-top: 11.5px;
+  padding-bottom: 12.5px;
+}
 
-/* line 80, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
+#container #siteheader {
+  margin-left: 175px;
+  padding-top: 100px;
+}
+/* line 92, ../sass/screen.scss */
 #container #siteheader #sitename {
-  font-size: 27px;
+  font-family: 'Bowlby One SC';
+  font-size: 60px;
+  line-height: 2;
+  height: 100px;
   margin: 25px 0;
 }
-/* line 85, ../sass/screen.scss */
+/* line 100, ../sass/screen.scss */
 #container article {
   width: 575px;
   margin-left: 175px;
