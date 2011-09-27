@@ -106,3 +106,40 @@ body hr {
   width: 575px;
   margin-left: 175px;
 }
+/* line 106, ../sass/screen.scss */
+#container article h1 {
+  margin-left: -25px;
+  padding-left: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 0;
+  border-bottom: 1px solid #666666;
+}
+/* line 115, ../sass/screen.scss */
+#container article .entry-info {
+  width: 124px;
+  min-height: 75px;
+  padding: 25px 0;
+  border-right: 1px solid #666666;
+  float: left;
+  margin-left: -150px;
+}
+/* line 122, ../sass/screen.scss */
+#container article .entry-info .date-year, #container article .entry-info .date-month, #container article .entry-info .date-weekday {
+  line-height: 1;
+  display: block;
+  width: 15px !important;
+  float: right;
+  margin-right: 12.5px;
+}
+/* line 128, ../sass/screen.scss */
+#container article .entry-info .date-year *, #container article .entry-info .date-month *, #container article .entry-info .date-weekday * {
+  display: block;
+}
+/* line 135, ../sass/screen.scss */
+#container article .entry-info .date-month .date-day {
+  width: 15px !important;
+}
+/* line 137, ../sass/screen.scss */
+#container article .entry-info .date-month .date-day .day-name-hidden {
+  display: none;
+}

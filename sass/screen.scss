@@ -100,5 +100,47 @@ body{
   article{
     width:($gwidth * 5 * 4) + ($gwidth * 3);
     margin-left:$gwidth * 5 + $gwidth * 2;
+
+    $borderw : 1px solid #666;
+
+    h1{
+      margin-left: -$gwidth;
+      padding-left: $gwidth;
+      padding-bottom: $gheight;
+      margin-bottom:0;
+      border-bottom:$borderw;
+      
+    }
+
+    .entry-info{
+      width: $gwidth * 5 - 1px;
+      min-height: $bfsize * 5;
+      padding: $gheight 0;
+      border-right: $borderw;
+      float: left;
+      margin-left: - ($gwidth * 6);
+      .date-year, .date-month, .date-weekday{
+        line-height:1;
+        display:block;
+        width:$bfsize !important;
+        float:right;
+        margin-right:$gwidth / 2;
+        *{
+          display:block;
+        }
+      }
+      .date-year{
+      }
+      .date-month{
+        .date-day{
+          width: $bfsize !important;
+          .day-name-hidden{
+            display:none;
+          }
+        }
+      }
+      .date-weekday{
+      } 
+    }
   }
 }
