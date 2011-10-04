@@ -1,8 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
+//basic cell
 $gwidth : 25px; //grid cell width
 $gheight : 25px; //grid cell height
 
@@ -13,19 +9,27 @@ $ffmono : Monaco, "Lucida Console", monospace;
 $bfsize: 15px; //body font size
 $fsizeivl : 2px; //font size increment
 
+//text color
+
+$black: #113;
+$darkgrey: #333;
+$grey: #666;
+$lightgrey: #999;
+$verylightgrey: #ddd;
+$pblue: #003153;
+
 body.wireframe {
-  background:url('../img/_grid.png');
+  background: url(../img/_grid.png); 
   #grid-columns{
     position:fixed;
     height:100%;
     top:0;
     .column{
-      box-sizing:border-box;
-      margin:25px 0 0 25px;
+      margin:0 0 0 25px;
       width:125px;
       height:100%;
-      border:1px solid #ffdddd;
       float:left;
+      background:rgba(100, 100, 10, 0.1);
     }
     z-index:-10000;
   }
@@ -83,41 +87,51 @@ body{
     padding-top:$gheight / 2 - 1px;
     padding-bottom:$gheight / 2;
   }
+  a{
+    text-decoration:none;
+  }
+  img{
+    padding: $gheight $gwidth;
+    background: $verylightgrey;
+  }
 }
+@mixin flexbox{
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
 
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+
+  display: -o-box;
+  -o-box-orient: horizontal;
+
+  display: box;
+  box-orient: horizontal;
+}
 #container {
+  @include flexbox;
   #siteheader{
-    margin-left:$gwidth * 7;
-    padding-top:$gheight * 4;
-    #sitename{
-      font-family: 'Bowlby One SC';
-      font-size:$bfsize * 4;
-      line-height:2;
-      height:$gheight * 4;
-      margin:$gwidth 0;
+    width: $gwidth * (5 + 1);
+    background: $pblue;
+    padding-top: $gheight;
+    #sitename a{
+      margin-left:$gwidth - 3px;
+      min-height:446px;
+      width:55px;
+      text-indent:-32767px;
+      display:block;
+      background:url(../img/header.png) no-repeat;
     }
   }
-  article{
-    width:($gwidth * 5 * 4) + ($gwidth * 3);
-    margin-left:$gwidth * 5 + $gwidth * 2;
-
-    $borderw : 1px solid #666;
-
-    h1{
-      margin-left: -$gwidth;
-      padding-left: $gwidth;
-      padding-bottom: $gheight;
-      margin-bottom:0;
-      border-bottom:$borderw;
-      
-    }
-
-    .entry-info{
+  #main{
+  padding:$gheight 0 $gheight * 2 $gwidth;
+  width:($gwidth * 5 * 6) + ($gwidth * 7);
+  @include flexbox;
+  .entry-info{
+      display:none;
       width: $gwidth * 5 - 1px;
       min-height: $bfsize * 5;
       padding: $gheight 0;
-      border-right: $borderw;
-      float: left;
       margin-left: - ($gwidth * 6);
       .date-year, .date-month, .date-weekday{
         line-height:1;
@@ -141,6 +155,49 @@ body{
       }
       .date-weekday{
       } 
+    }//entry-info
+
+  article{
+    //margin-top: $gheight;
+    $borderw: 1px solid #666;
+    width: ($gwidth * 5 * 4) + ($gwidth * 3);
+    color: $black;
+    h1{
+      //margin:0 0 $gheight 0;
     }
+  }//article
+  .footnotes{
+    padding:$gheight 0 0 $gwidth * 2;
+    width: $gwidth * 5 * 2;
+    ol{
+      padding:0;
+      margin:0;
+      font-size: $bfsize * 1.2;
+      font-style: italic;
+      letter-spacing:-1px;
+      color: $lightgrey;
+      li{
+        padding:0 0 4px 6px;
+        margin:0 0 4px -6px;
+        letter-spacing:0;
+        div{
+          color: $grey;
+          font-style: normal;
+          font-size: $bfsize * 0.8;
+          line-height: $gheight * 0.8;
+        }
+      }
+    }  
+  }
+  }//main
+}//container
+
+footer{
+  min-height:$gheight * 15;
+  background:$pblue;
+  color: $verylightgrey;
+  padding:$gheight 0 $gheight $gwidth * 7;
+  h2{
+    margin-top:0;
   }
 }
